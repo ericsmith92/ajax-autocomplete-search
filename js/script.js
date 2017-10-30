@@ -53,6 +53,12 @@ function search(e){
     }
 }
 
+//clear search results when user clicks away
+function clearResults(){
+  searchResults.innerHTML = '';
+}
+
 //listeners
 formHandle.addEventListener('submit', search);
 searchInput.addEventListener('keyup', search);
+searchInput.addEventListener('focusout', clearResults);
